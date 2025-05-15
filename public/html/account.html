@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Account</title>
+
+<link rel="stylesheet" href="/css/navBar.css">
+<link rel="stylesheet" href="/css/account.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="/js/makeRequest.js"></script>
+<script src="/js/getCSRFcookie.js" defer></script>
+<script src="/js/account.js" defer></script>
+<script src="/js/checkDetails.js"></script>
+<script src="/js/searchBar.js" defer></script>
+<script src="/js/updateNavSignIn.js"></script>
+<script src="/js/checkSignedIn.js"></script>
+
+</head>
+<body>
+
+  <header>
+    <img src="/images/bahlkLogo.png" id="logo">
+    <h1 id="title">The Bake-a-Holics Blog</h1>
+
+    <br>
+    <br>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="createpost">Post</a>
+      <a class="active" href="account">Account</a>
+      <a id="aSignIn" href="signin">Sign In</a>
+      <!--  <a href="searchPage">Search</a>  -->
+      
+      <form id="searchBarForm">
+          <input type="text" placeholder="Search.." name="search" id="search" required>
+          <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </header>
+
+<h1>Account Information</h1>
+
+    <form class = "accountInfo">
+      <input type="hidden" id="csrf_token" name="csrf_token" value="">
+      <div class = "infoField"> 
+        <label for="firstName"><b>First Name</b></label>
+        <input id="firstName" name="firstName" type="text" required>
+        <button type="button" class="preBtn" onclick="updateFN()"> Edit First Name </button>
+      </div>
+
+      <div class = "infoField"> 
+        <label for="lastName"><b>Last Name</b></label>
+        <input id="lastName" name="lastName" type="text" required>
+        <button type="button" class="preBtn" onclick="updateLN()"> Edit Last Name </button>
+      </div>
+
+      <div class = "infoField"> 
+	      <label for="username"><b>Username</b></label>
+        <input id="username" name="username" type="text" required>
+        <button type="button" class="preBtn" onclick="requestPWUN()"> Edit Username </button>
+      </div>
+    
+      <div class = "infoField"> 
+        <label for="email"><b>Email Address</b></label>
+        <input id="email" name="email" type="email" required>
+        <button type="button" class="preBtn" onclick="requestPWEM()"> Edit Email </button>
+      </div>
+
+
+      <div>
+        <button type="button" class="preBtn" onclick="changePW()"> Change Password </button>
+      </div>
+
+
+      <div>
+        <button id="btnEnableMFA" onclick="enableMFA()">Enable MFA</button>
+      </div>
+
+
+      <div id="unChange" class = "infoField" style="display: none;">
+
+        <div class = "infoField">
+          <label for="unPW"><b>Password </b></label>
+          <input id="unPW" name="unPW" type="password" required>
+        </div>
+
+        <button type="button" class="preBtn" onclick="updateUN()"> Update Username </button>
+
+      </div>
+
+      <div id="emChange" class = "infoField" style="display: none;">
+
+        <div class = "infoField">
+          <label for="emPW"><b>Password </b></label>
+          <input id="emPW" name="emPW" type="password" required>
+        </div>
+
+        <button type="button" class="preBtn" onclick="updateEM()"> Update Email </button>
+
+      </div>
+
+      <div id="pwChange" class = "infoField" style="display: none;">
+
+        <div class = "infoField">
+          <label for="oldPW"><b>Old Password </b></label>
+          <input id="oldPW" name="oldPW" type="password" required>
+        </div>
+
+        <div class = "infoField">
+          <label for="newPW"><b>New Password </b></label>
+          <input id="newPW" name="newPW" type="password" required>
+        </div>
+
+        <div class = "infoField"> 
+          <label for="newPWRep"><b>Repeat New Password </b></label>
+          <input id="newPWRep" name="newPWRep" type="password" required>
+        </div>
+
+        <button type="button" class="preBtn" onclick="updatePW()"> Update Password </button>
+
+      </div>
+
+
+    </form>
+
+    
+
+
+</body>
+</html>

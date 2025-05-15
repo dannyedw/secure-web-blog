@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Add a gray background color with some padding */
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background-color: #fcfccf;
+
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: middle;
+    width: 75%;
+  }
+  
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    padding-bottom: 1.2cm;
+    border-radius: 15px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+
+  .editPostButton{
+    text-decoration: none;
+
+    border-radius: 0.5cm;
+    border-color: black;
+    background-color: #f78686;
+    padding: 7px;
+
+    font-size: 20px;
+    color: black;
+
+    float: right;
+  }
+
+  .editPostButton:hover{
+    background-color: #990000;
+    color: whitesmoke;
+  }
+
+  
+.postImg{
+  max-width: 50%;
+  max-height: 600px;
+}
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }

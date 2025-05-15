@@ -1,0 +1,38 @@
+
+body {
+    font-family: Arial;
+    padding: 20px;
+    margin: 0;
+  }
+
+
+input
+{
+    align-self: right;
+}
+
+label
+{
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+    text-align: left; 
+}
+
+button
+{
+    padding: 5px;
+    margin: 10px;
+}
+
+.accountInfo {
+    padding: 20px;
+    margin: 20px 20px 22px 20px;   
+    width: 100%;
+    text-align: center;
+  }
+
+.infoField
+{
+    padding: 10px;
+    margin: 20px 20px 22px 20px; 
+}

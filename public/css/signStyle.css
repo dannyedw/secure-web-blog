@@ -1,0 +1,74 @@
+* {box-sizing: border-box}
+
+
+body {
+  font-family: Arial;
+  padding: 20px;
+  margin: 0;
+}
+
+
+/* Full-width input fields */
+  #username, #lastName, #firstName, #password, #password1, input[type=password], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+#username:focus, input[type=password]:focus, input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+
+/* Set a style for all buttons */
+#loginBtn, .signupbtn {
+  background-color: #990000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  margin-top: 20px;
+}
+
+#loginBtn:hover, .signupbtn:hover {
+  opacity:1;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+header{
+  background-color: #ffea61;
+  padding-top: 10px;
+  border-radius: 15px;
+}
+
+header img {
+  margin-left: 10px;
+  float: left;
+  width: 85px;
+  /* height: 100px; */
+  background: #555;
+}
+
+header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}

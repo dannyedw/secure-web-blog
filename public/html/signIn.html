@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign In</title>
+
+<link rel="stylesheet" href="/css/signStyle.css">
+<link rel="stylesheet" href="/css/navBar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script src="/js/signin.js" defer></script>
+<script src="/js/makeRequest.js"></script>
+<script src="/js/checkDetails.js"></script>
+
+</head>
+<body>
+
+  <header>
+    <img src="/images/bahlkLogo.png" id="logo">
+    <h1 id="title">The Bake-a-Holics Blog</h1>
+
+    <br>
+    <br>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="createpost">Post</a>
+      <a href="account">Account</a>
+      <a id="aSignUp" href="signup">Sign Up</a>
+      <a class="active" id="aSignIn" href="signin">Sign In</a>
+      
+      <form id="searchBarForm">
+          <input type="text" placeholder="Search.." name="search" id="search" required>
+          <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </header>
+
+<h1>Sign In</h1>
+
+
+<form id="fSignin">
+  <div class="container">
+    <label for="username"><b>Username</b></label>
+    <input id="username" name="username" type="text" required>
+
+    <label for="password"><b>Password</b></label>
+    <input id="password" name="password" type="password" required>
+    
+    <input name="cbShowPassword" type="checkbox" onclick="toggleShowPassword()">
+    <label for="cbShowPassword">Show Password</label>
+
+    <button type="submit" id="loginBtn">Login</button>
+   
+  </div>
+
+  <div class="container">
+    <span class="psw">Forgot <a href="#">password?</a></span>
+    <p>Dont have an account <a href="/signup">Sign Up</a></p>
+  </div>
+</form>
+
+</body>
+</html>

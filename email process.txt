@@ -1,0 +1,42 @@
+
+signup:
+    Enter username, password, first and last name, email
+        User added to database but marked as currently signing up, so username and email are reserved and cannot be
+        taken by someone else while sign up still in progress
+        User cannot yet log in with their details
+
+    Redirect to page asking to check email
+        Option to change email and resend if it was entered incorectly
+        Option to cancel sign up (removes user details from database)
+        Must be able to return to this point if browser exited/session deleted
+        If email link not clicked within time frame (e.g. 30 minutes) sign up is cancelled and user is removed
+    
+    Code entered correctly (if incorrect, prompt user again)
+        User marked as fully signed up and now able to access site with their account
+
+
+forgotten password:
+    Email sent containing url to password reset page (with a unique code in the url)
+        Url expires after some time (e.g. 30 minutes)
+    User enters new password here (twice for confirmation)
+        Password is updated in database
+        Return them to the normal login screen to force them knowing username, password and having email for 2fa in case
+        email link for reset password is guessed
+
+
+changing password:
+    Require user to know old password and submit along with the new one
+    Send alert email that the password has been changed
+
+
+email changed:
+    User must enter password as well as the email they wish to use
+        Alert email sent to previous address, but cannot require authentication from that email since the main use case
+        For changing email address would be that the user no longer has access to the old one
+        This may mean it would be a good idea to prevent username changes, since if the account is compromised an
+        attacker could completely change all details to things the user doesn't know, and won't be able to recover (with
+        our hypothetical tech support they would contact)
+    
+    redirect to page asking for email code
+        Same as signup, except the email doesn't change over until whole process complete - the previous email is still
+        valid up to this point

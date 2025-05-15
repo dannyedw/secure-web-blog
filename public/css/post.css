@@ -1,0 +1,49 @@
+
+body {
+    font-family: Arial;
+    padding: 20px;
+  }
+
+
+.container {
+    padding: 20px;
+    margin: 20px 20px 22px 20px;   
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    width: 75%;
+    border-radius: 15px;
+  }
+
+.error {
+  color: red;
+}
+
+.largeBtn{
+  text-decoration: none;
+  border-radius: 0.5cm;
+  border-color: black;
+  background-color: #f78686;
+  padding: 7px;
+  font-size: 20px;
+  color: black;
+}
+
+.largeBtn:hover{
+  background-color: #990000;
+  color: whitesmoke;
+}
+
+input[type=text] {
+  width: 250px;
+}
+
+textarea {
+  width: 500px;
+}
+
+input[type="file"] {
+  text-decoration: none;
+  margin-top: 8px;
+  margin-left: 70px;
+}

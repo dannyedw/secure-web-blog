@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Results</title>
+
+<link rel="stylesheet" href="/css/navBar.css">
+<link rel="stylesheet" href="/css/searchPage.css">
+<link rel="stylesheet" href="/css/indexStyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script src="/js/searchPage.js" defer></script>
+<script src="/js/searchBar.js" defer></script>
+<script src="/js/checkDetails.js"></script>
+<script src="/js/makeRequest.js"></script>
+<script src="/js/checkSignedIn.js"></script>
+<script src="/js/updateNavSignIn.js"></script>
+
+
+</head>
+<body>
+
+  <header>
+    <img src="/images/bahlkLogo.png" id="logo">
+    <h1 id="title">The Bake-a-Holics Blog</h1>
+
+    <br>
+    <br>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="createpost">Post</a>
+      <a href="account">Account</a>
+      <a id="aSignUp" href="signup">Sign Up</a>
+      <a id="aSignIn" href="signin">Sign In</a>
+      
+      <form id="searchBarForm">
+          <input type="text" placeholder="Search.." name="search" id="search" required>
+          <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </header>
+
+<h1 id="searchTitle">Search Results</h1>
+<h2><span id="noResults"></span> for "<span id="searchQuery"></span>":</h2>
+
+<div class="row">
+  <div id="postContainer" class="leftcolumn">
+
+  </div>
+
+</div>
+
+</body>
+</html>

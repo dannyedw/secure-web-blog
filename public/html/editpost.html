@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Post</title>
+
+<link rel="stylesheet" href="/css/navBar.css">
+<link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="/js/editPost.js" defer></script>
+<script src="/js/searchBar.js" defer></script>
+<script src="/js/getCSRFcookie.js" defer></script>
+<script src="/js/makeRequest.js"></script>
+<script src="/js/checkDetails.js"></script>
+<script src="/js/updateNavSignIn.js"></script>
+<script src="/js/checkSignedIn.js"></script>
+
+</head>
+<body>
+
+  <header>
+    <img src="/images/bahlkLogo.png" id="logo">
+    <h1 id="title">The Bake-a-Holics Blog</h1>
+
+    <br>
+    <br>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="createpost">Post</a>
+      <a href="account">Account</a>
+      <a id="aSignIn" href="signin">Sign In</a>
+      <!--  <a href="searchPage">Search</a>  -->
+      
+      <form id="searchBarForm">
+          <input type="text" placeholder="Search.." name="search" id="search" required>
+          <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </header>
+
+<div class="container">
+
+  <h1>Edit Post</h1>
+  <form id="editPost">
+    <input type="hidden" id="csrf_token" name="csrf_token" value="">
+    <input type="hidden" id="postId" name="postId">
+    <div class="row">
+      <div class="col-25">
+        <label for="postTitle"><b> Post Title</b></label>
+      </div>
+      <div class="col-75">
+        <input type="hidden" id="titleWasEdited" value="false">
+        <input type="text" id="ptitle" name="ptitle" placeholder="">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="postContent"><b>Content</b></label>
+      </div>
+      <div class="col-75">
+        <input type="hidden" id="contentWasEdited" value="false">
+        <textarea id="content" name="content" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="visibility"><b>Post Visibility</b></label>
+      </div>
+      <div class="col-75">
+        <input type="hidden" id="visibilityWasEdited" value="false">
+        <select name="visibility" id="visibility">
+          <option value="public">Public</option>
+          <option value="private">Private</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="image"><b>Image</b></label>
+        <br>
+      </div>
+      <div class="col-75">
+        <div id="noImg">
+          <label for='image'>Upload Image (.png, .jpeg. jpg)</label>
+          <!-- REMOVE ACCEPT BELOW TO SHOW SERVER INGORES INCORECT FILES -->
+          <p><input id='image' type="file" accept=".png, .jpeg, .jpg" style="margin: 0;"><button type="button" id="uploadNewImg">Upload Selected Image</button></p>
+        </div>
+        <div id="imgPresent" style="display: none;">
+          <p><span id="imgFilename">yada</span>&nbsp;&nbsp;<button id="deleteImage" type="button">Delete Image</button></p>
+        </div>
+      </div>
+    </div>
+    <p id="errorMessage" class="error"></p>
+    <div class="row">
+      <input type="submit" value="Update" class="largeBtn">
+    </div>
+    
+  </form>
+  <br>
+  <button id="deletePost" class="largeBtn">Delete</button>
+</div>
+
+
+
+</body>
+</html>

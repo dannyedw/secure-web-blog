@@ -1,0 +1,17 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+    margin: 0;
+  }
+
+.ResultsColumn {
+    padding: 20px;
+    margin: 20px 20px 22px 20px;   
+    width: 100%;
+    text-align: center;
+  }
+
+  #searchTitle{
+      text-align: center;
+      width: 100%;
+  }
